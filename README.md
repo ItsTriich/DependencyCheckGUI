@@ -33,28 +33,46 @@ The latest CLI can be downloaded from github in the [releases section](https://g
 
 ### 1. Setting up the Graphical User Interface
   * Rename the downloaded DependencyCheckGUI release directory to `DependencyCheckGUI`.
-  * Unzip and open the recently downloaded Dependency-Check CLI release. Copy the "dependency-check" folder into the DependencyCheckGUI folder.
-  * (REQUIRED) The DependencyCheckGUI folder must be located on the desktop.
-  * Navigate into "dependency-check" and create a file named "NVD API Key.txt"
-  * Input your API Key into this text document. (Updates Default Key)
-  * Verify that Python and the Java Development Kit are installed.
-  * Run these commands:
+  
+  * Extract the downloaded Dependency-Check CLI release. Copy the `dependency-check` folder into the `DependencyCheckGUI` folder.
+  
+  * **(Important)** Place the `DependencyCheckGUI` folder on your Desktop. This is currently a requirement for the application to function correctly.
+  
+  * Navigate to the `dependency-check` folder and create a new text file named `NVD API Key.txt`.
+  
+  * Enter your NVD API Key into the `NVD API Key.txt` file. This will override the default (empty) key.
+  
+  * Ensure that both Python and the Java Development Kit are properly installed and configured on your system.
+  
+  * Open a command prompt or terminal and execute the following commands:
 ```
 > cd .\Desktop\DependencyCheckGUI\Scripts\
 > python "dependency-check GUI.py"
 ```
 
-### 2. Running Dependency-Check Scans (Default)
-  * Input the required fields (Project Name, Application Version, and Path)
-  * Input new API key (Leave blank to use default API key)
-  * Select button “Run Dependency-Check”
-  * The generated reports can be located via “Open Reports”
-  * The debugging logs can be viewed via “View Logs”
 
-### 3.	Running Dependency-Check Scans (Update Only)
-  * Input new API key (Leave blank to use default API key)
-  * Select button “Run Dependency-Check”
-  * This will automatically update the dependency-check CVE database with the latest NVD Data Feeds from NIST
+## Usage
+
+### 1. Running Dependency-Check Scans (Default Mode)
+
+  *  Fill in the required fields: `Project Name`, `Application Version`, and `Path` to the project you wish to scan.
+
+  *  Optionally, enter a new NVD API key. Leave this field blank to use the key defined in the `NVD API Key.txt` file (recommended).
+
+  *  Click the "Run Dependency-Check" button to start the scan.
+
+  *  Access the generated reports by clicking the "Open Reports" button. The reports will be located in the reports folder.
+
+  *  View the debugging logs by clicking the "View Logs" button.
+
+### 2. Running Dependency-Check Scans (Update Only Mode)
+
+  *  Optionally, enter a new NVD API key. Leave this field blank to use the key defined in the `NVD API Key.txt` file (recommended).
+
+  *  Click the "Run Dependency-Check" button to initiate an update of the Dependency-Check CVE database using the latest NVD data.  The "Path", "Project Name" and "Application Version" fields are ignored in this mode.
+
+
+
 
 
    
