@@ -20,7 +20,7 @@ how to set the NVD API key.
 Python 3.13.x
 
 ### Java Verison
-Minimum Java Development Kit: Java 11
+Minimum Java Development Kit (JDK): Java 11
 
 ### Internet Access
 OWASP dependency-check requires access to several externally hosted resources.
@@ -29,10 +29,10 @@ For more information see [Internet Access Required](https://dependency-check.git
 ### Download the latest dependency-check CLI release:
 The latest CLI can be downloaded from github in the [releases section](https://github.com/dependency-check/DependencyCheck/releases).
 
-## Instructions
+## Installation and Setup
 
 ### 1. Setting up the Graphical User Interface
-  * Rename the DependencyCheckGUI release -> DependencyCheckGUI
+  * Rename the downloaded DependencyCheckGUI release directory to `DependencyCheckGUI`.
   * Unzip and open the recently downloaded Dependency-Check CLI release. Copy the "dependency-check" folder into the DependencyCheckGUI folder.
   * (REQUIRED) The DependencyCheckGUI folder must be located on the desktop.
   * Navigate into "dependency-check" and create a file named "NVD API Key.txt"
