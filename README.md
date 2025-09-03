@@ -26,7 +26,7 @@ Minimum Java Development Kit: Java 11
 OWASP dependency-check requires access to several externally hosted resources.
 For more information see [Internet Access Required](https://dependency-check.github.io/DependencyCheck/data/index.html).
 
-### Downloading the latest dependency-check CLI release:
+### Download the latest dependency-check CLI release:
 The latest CLI can be downloaded from github in the [releases section](https://github.com/dependency-check/DependencyCheck/releases).
 
 ## Instructions
