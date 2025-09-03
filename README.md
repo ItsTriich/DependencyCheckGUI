@@ -45,7 +45,19 @@ The latest CLI can be downloaded from github in the [releases section](https://g
 ```
 
 ### 2. Running Dependency-Check Scans (Default)
-*
+  * Input the required fields (Project Name, Application Version, and Path)
+  * Input new API key (Leave blank to use default API key)
+  * Select button “Run Dependency-Check”
+  * The generated reports can be located via “Open Reports”
+  * The debugging logs can be viewed via “View Logs”
+
+### 3.	Running Dependency-Check Scans (Update Only)
+  * Input new API key (Leave blank to use default API key)
+  * Select button “Run Dependency-Check”
+  * This will automatically update the dependency-check CVE database with the latest NVD Data Feeds from NIST
+
+
+   
 
 
 
