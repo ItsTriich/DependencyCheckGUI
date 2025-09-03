@@ -31,6 +31,9 @@ The latest CLI can be downloaded from github in the [releases section](https://g
 
 ## Instructions
 
+### 1. Setting up the Graphical User Interface
+  * Unzip the recently downloaded Dependency-Check release 
+  * feefe
 
 
 
