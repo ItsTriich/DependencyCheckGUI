@@ -36,16 +36,18 @@ The latest CLI can be downloaded from github in the [releases section](https://g
   * Unzip and open the recently downloaded Dependency-Check CLI release. Copy the "dependency-check" folder into the DependencyCheckGUI folder.
   * (REQUIRED) The DependencyCheckGUI folder must be located on the desktop.
   * Navigate into "dependency-check" and create a file named "NVD API Key.txt"
-  * Input your API Key into this text document.
+  * Input your API Key into this text document. (Updates Default Key)
   * Verify that Python and the Java Development Kit are installed.
   * Run these commands:
 ```
-Powershell
 > cd .\Desktop\DependencyCheckGUI\Scripts\
 > python "dependency-check GUI.py"
 ```
 
-> .\bin\dependency-check.bat -h
+### 2. Running Dependency-Check Scans (Default)
+*
+
+
 
 
 
