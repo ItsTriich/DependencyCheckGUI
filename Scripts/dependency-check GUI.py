@@ -7,10 +7,6 @@ import shutil
 import shlex
 import logging
 
-# Configure logging
-logging.basicConfig(filename=log_file_path, level=logging.DEBUG,
-                    format='%(asctime)s - %(levelname)s - %(message)s')
-
 home_dir = os.path.expanduser("~")
 
 dependency_check_path = os.path.join(
@@ -18,6 +14,10 @@ dependency_check_path = os.path.join(
 
 log_file_path = os.path.join(
     home_dir, "Desktop\\DependencyCheckGUI\\dependency_check_gui.log")
+
+# Configure logging
+logging.basicConfig(filename=log_file_path, level=logging.DEBUG,
+                    format='%(asctime)s - %(levelname)s - %(message)s')
 
 
 def run_dependency_check():
