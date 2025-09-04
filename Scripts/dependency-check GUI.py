@@ -12,8 +12,12 @@ logging.basicConfig(filename='dependency_check_gui.log', level=logging.DEBUG,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 home_dir = os.path.expanduser("~")
+
 dependency_check_path = os.path.join(
     home_dir, "Desktop\\DependencyCheckGUI\\dependency-check\\bin\\dependency-check.bat")
+
+log_file_path = os.path.join(
+    home_dir, "Desktop\\DependencyCheckGUI\\dependency_check_gui.log")
 
 
 def run_dependency_check():
