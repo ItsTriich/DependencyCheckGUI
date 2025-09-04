@@ -8,7 +8,7 @@ import shlex
 import logging
 
 # Configure logging
-logging.basicConfig(filename='dependency_check_gui.log', level=logging.DEBUG,
+logging.basicConfig(filename=log_file_path, level=logging.DEBUG,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 home_dir = os.path.expanduser("~")
