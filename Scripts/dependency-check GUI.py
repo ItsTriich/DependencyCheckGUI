@@ -88,6 +88,7 @@ def run_dependency_check():
                 f"--nvdApiKey \"{api_key}\" "
                 f"-s \"{app_path}\" "
                 f"-o \"{report_dir_versioned}\""
+                f" --noupdate "
             )
 
         logging.info(f"Executing command: {command}")
