@@ -81,15 +81,26 @@ def run_dependency_check():
                 run_button.config(state=tk.NORMAL)
                 return
 
-            command = (
-                f"\"{dependency_check_path}\" "
-                f"--project \"{project_versioned}\" "
-                f"-f CSV -f HTML "
-                f"--nvdApiKey \"{api_key}\" "
-                f"-s \"{app_path}\" "
-                f"-o \"{report_dir_versioned}\""
-                f" --noupdate "
-            )
+            if offline_var.get():
+                command = (
+                    f"\"{dependency_check_path}\" "
+                    f"--project \"{project_versioned}\" "
+                    f"-f ALL "
+                    f"--disableOssIndex "
+                    f"--noupdate "
+                    f"--nvdApiKey \"{api_key}\" "
+                    f"-s \"{app_path}\" "
+                    f"-o \"{report_dir_versioned}\""
+                )
+            else:
+                command = (
+                    f"\"{dependency_check_path}\" "
+                    f"--project \"{project_versioned}\" "
+                    f"-f ALL "
+                    f"--nvdApiKey \"{api_key}\" "
+                    f"-s \"{app_path}\" "
+                    f"-o \"{report_dir_versioned}\""
+                )
 
         logging.info(f"Executing command: {command}")
         print(f"Executing command: {command}")
@@ -165,7 +176,7 @@ def view_logs_file():
 
 
 def main():
-    global root, update_only_var, project_entry, version_entry, app_path_entry, report_entry
+    global root, update_only_var, project_entry, version_entry, app_path_entry, report_entry, offline_var
     global api_key_entry, run_button, output_text, app_browse_button, report_browse_button, view_logs_button
 
     root = tk.Tk()
@@ -179,6 +190,11 @@ def main():
     update_checkbox = tk.Checkbutton(
         main_frame, text="Update Only", variable=update_only_var, command=toggle_fields)
     update_checkbox.grid(row=0, column=0, columnspan=3, sticky=tk.W)
+
+    offline_var = tk.BooleanVar()
+    offline_checkbox = tk.Checkbutton(
+        main_frame, text="Air-Gapped System", variable=offline_var)
+    offline_checkbox.grid(row=0, column=1, columnspan=3, sticky=tk.W)
 
     # Project Name
     tk.Label(main_frame, text="Project Name: (Required)").grid(

@@ -8,4 +8,7 @@
 ## [Version 1.1](https://github.com/ItsTriich/DependencyCheckGUI/releases/tag/v1.1) (2025-09-08)
 
 - fix: fixed bug when script is ran a log file is generated in scripts folder.
-- feat: added " --noupdate " to the default command when ran. (accessible for an air-gapped system).
+
+## [Version 1.2](https://github.com/ItsTriich/DependencyCheckGUI/releases/tag/v1.2) (2025-09-11)
+
+- feat: Added a button "Air-Gapped System" that disables the dependency-check batch script from running automatic updates and an OssIndex search. 
